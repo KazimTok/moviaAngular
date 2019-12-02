@@ -1,0 +1,65 @@
+
+
+
+  <div class="page-content "
+  
+  >
+    <div class="content clearfix">
+      <div id="movielist" class="container mb-5">
+        <div class="section-title col-lg-10 col-md-12 ml-auto mr-auto">
+          <h3 class="mb-4">Filmler</h3>
+          <p>En güncel sinema ve TV haberleri, fragmanlar ve röportajlar, üstelik en kapsamlı sinema ve televizyon
+            veritabanı</p>
+        </div>
+
+      
+        
+
+
+        <div id="cards" class="container mb-2" style="padding-bottom: 1px">
+           <div class="example col-md-12 ml-auto mr-auto"
+         
+          >
+            <div class="row "
+            infiniteScroll
+            [infiniteScrollDistance]="2"
+            [infiniteScrollThrottle]="50"
+            (scrolled)="onScroll($event)"
+            [infiniteScrollDisabled]="isFullListDisplayed"
+            [scrollWindow]="true"
+            >
+              <div class="col-lg-3 col-md-4 col-sm-12 mb-4" *ngFor="let d of apiservice.data">
+                <div class="card">
+                  <img class="card-img-top"
+                    src="{{d.Poster}}"
+                    alt="Film İsmi">
+                  <div class="card-body">
+                    <h4 class="card-title">{{d.Title}}</h4>
+                    <p class="card-title">{{d.Year}}</p>
+                    <a  [routerLink]="['/moviadetail/', d.imdbID]" 
+                     class="stretched-link"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div>
+
+
+
+      </div>
+
+
+
+    </div>
+  </div>
+
+  <footer class="main-footer py-5">
+    <p class="text-muted text-center small p-0 mb-4">&copy; Copyright 2020 — MoviaLab</p>
+   
+  </footer>
+  
+
+
+ 
+

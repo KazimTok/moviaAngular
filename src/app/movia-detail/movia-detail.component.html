@@ -1,0 +1,29 @@
+<div class="page-content">
+  <div class="content clearfix">
+    <!-- MovieDetails -->
+    <div class="container-fluid">
+      <div class="row col-lg-10 col-md-12 ml-auto mr-auto">
+        <div class="col-lg-3 col-md-3 col-sm-12 mb-4 text-center">
+          <img class="img-fluid" src="{{data.Poster}}" alt="{{data.Title}}">
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-12 mb-4">
+          <h3 class="mb-1">{{data.Title}}</h3>
+          <p><span class="fa fa-star checked"></span><span> {{data.imdbRating}}</span> | {{data.Year}} |
+            {{data.Runtime}} | {{data.Genre}} | {{data.Production}} | {{data.Language}}</p>
+          <p>{{data.Plot}}</p>
+          <p><strong>Director:</strong> {{data.Director}}</p>
+          <p><strong>Writer:</strong> {{data.Writer}}</p>
+          <p><strong>Actors:</strong> {{data.Actors}}</p>
+          <p><strong>Awards:</strong> {{data.Awards}}</p>
+
+          <button type="button" class="btn-btn-secondary btn-sm" (click)="Back()">
+            Geri
+          </button>
+
+          <!-- <a  [routerLink]="['/movialist']" 
+                     class="">Geri</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
